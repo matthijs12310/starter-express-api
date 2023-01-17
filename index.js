@@ -13,11 +13,10 @@ const command = spawn('lscpu')
 // the `data` event is fired every time data is
 // output from the command
 command.stdout.on('data', output => {
-    // the output data is captured and printed in the callback
     console.log("Output: ", output.toString())
+    response.end('Hello World\n', output.toString());
 })
-    // Send the response body as "Hello World"
-    response.end('Hello World\n', output.ToString());
+
  }).listen(8081);
  
  // Console will print the message
