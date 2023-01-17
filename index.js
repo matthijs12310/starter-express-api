@@ -17,7 +17,7 @@ command.stdout.on('data', output => {
     console.log("Output: ", output.toString())
 })
     // Send the response body as "Hello World"
-    response.end('Hello World\n');
+    response.end('Hello World\n', output.ToString());
  }).listen(8081);
  
  // Console will print the message
